@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditMappingDialog));
             this.label_toKey = new System.Windows.Forms.Label();
             this.label_fromKey = new System.Windows.Forms.Label();
             this.listBox_toKeys = new System.Windows.Forms.ListBox();
@@ -151,6 +152,7 @@
             this.Controls.Add(this.button_setFromKey);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditMappingDialog";
             this.Text = "EditMappingDialog";
             this.ResumeLayout(false);

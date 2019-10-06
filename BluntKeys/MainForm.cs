@@ -28,6 +28,8 @@ namespace BluntKeys
         {
             using (var regScanMapKey = Registry.LocalMachine.CreateSubKey(kbRegKey))
                 regScanMapKey.SetValue("Scancode Map", keymap.Serialize());
+
+            statusLabel1.Text = "Mappings saved to registry. Changes will take effect at the next Windows sign-in.";
         }
 
         void LoadKeyMapFromRegistry(object sender, EventArgs e)
@@ -43,6 +45,8 @@ namespace BluntKeys
         {
             using (var regScanMapKey = Registry.LocalMachine.CreateSubKey(kbRegKey))
                 regScanMapKey.DeleteValue("Scancode Map", false);
+
+            statusLabel1.Text = "Mappings cleared from registry. Changes will take effect at the next Windows sign-in.";
         }
 
         void SaveKeyMapToFile(object sender, EventArgs e)
