@@ -22,6 +22,7 @@ namespace BluntKeys
             InitializeComponent();
             LoadKeyMapFromRegistry(null, null);
             UpdateKeymapList();
+            Text = $"Bluntkeys - {(keymap.Entries.Count == 0 ? "No" : keymap.Entries.Count.ToString())} mappings saved in registry";
         }
 
         void SaveKeyMapToRegistry(object sender, EventArgs e)
@@ -30,6 +31,7 @@ namespace BluntKeys
                 regScanMapKey.SetValue("Scancode Map", keymap.Serialize());
 
             statusLabel1.Text = "Mappings saved to registry. Changes will take effect at the next Windows sign-in.";
+            Text = $"Bluntkeys - {keymap.Entries.Count} mappings saved in registry";
         }
 
         void LoadKeyMapFromRegistry(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace BluntKeys
                 regScanMapKey.DeleteValue("Scancode Map", false);
 
             statusLabel1.Text = "Mappings cleared from registry. Changes will take effect at the next Windows sign-in.";
+            Text = $"Bluntkeys - No mappings saved in registry";
         }
 
         void SaveKeyMapToFile(object sender, EventArgs e)
