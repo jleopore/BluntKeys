@@ -69,6 +69,7 @@
             this.listBox_toKeys.Name = "listBox_toKeys";
             this.listBox_toKeys.Size = new System.Drawing.Size(431, 438);
             this.listBox_toKeys.TabIndex = 17;
+            this.listBox_toKeys.SelectedIndexChanged += new System.EventHandler(this.SelectToKey);
             // 
             // listBox_fromKeys
             // 
@@ -78,6 +79,7 @@
             this.listBox_fromKeys.Name = "listBox_fromKeys";
             this.listBox_fromKeys.Size = new System.Drawing.Size(434, 438);
             this.listBox_fromKeys.TabIndex = 16;
+            this.listBox_fromKeys.SelectedIndexChanged += new System.EventHandler(this.SelectFromKey);
             // 
             // button4
             // 
@@ -109,6 +111,7 @@
             this.button_setToKey.TabIndex = 13;
             this.button_setToKey.Text = "Type Key";
             this.button_setToKey.UseVisualStyleBackColor = true;
+            this.button_setToKey.Click += new System.EventHandler(this.TypeToKey);
             // 
             // button_setFromKey
             // 
@@ -118,6 +121,7 @@
             this.button_setFromKey.TabIndex = 12;
             this.button_setFromKey.Text = "Type Key";
             this.button_setFromKey.UseVisualStyleBackColor = true;
+            this.button_setFromKey.Click += new System.EventHandler(this.TypeFromKey);
             // 
             // label2
             // 
